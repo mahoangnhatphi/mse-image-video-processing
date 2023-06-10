@@ -5,6 +5,7 @@ clear, clc, close all;
 Img = im2double(imread('cameraman.tif'));
 
 % brightness adjustment by intensity scaling
+%scale = 1; % 1 -> unchanged
 %scale = 0.5; % Less than 1 -> darker
 scale = 2.5; % More than 1 -> lighter
 scaledImg = scale .* Img;
