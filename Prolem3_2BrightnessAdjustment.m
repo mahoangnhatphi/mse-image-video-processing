@@ -6,7 +6,7 @@ Img = im2double(imread('cameraman.tif'));
 
 % brightness adjustment by intensity scaling
 %scale = 0.5; % Less than 1 -> darker
-scale = 2.5; % Less than 1 -> darker
+scale = 2.5; % More than 1 -> lighter
 scaledImg = scale .* Img;
 
 subplot(1, 2, 1), imshow(Img, [0 1]);
