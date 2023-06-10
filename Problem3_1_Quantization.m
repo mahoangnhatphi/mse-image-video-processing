@@ -3,12 +3,14 @@ clear, clc, close all;
 
 % load image 'nature.png'
 Img = double(imread('lonely_tree.jpg'));
+%Img = double(imread('nature.png'));
 
 % Repeat with different number of bits
 for noOfBit = 1 : 8
     %quantize to a given number of bits
     noOfLevel = 2 .^ noOfBit;
     levelGap = 256 / noOfLevel;
+    fprintf('noOfBit: %i, noOfLevel: %i, levelGap: %i\n', noOfBit, noOfLevel, levelGap)
     quantizedImg = uint8(ceil(Img / levelGap) * levelGap - 1);
 
     %plot image
