@@ -10,6 +10,7 @@ subplot(2, 2, 1), imshow(Img1), title('Salt Noise Image');
 subplot(2, 2, 2), imshow(Img2), title('Pepper Noise Image');
 
 %a. Filter the salt noise image by using a negative r value
+func = @harnonicRatio;
 Img1_denoise = nlfilter(Img1, [3 3], @c_harmonic, -1);
 subplot(2, 2, 3), imshow(Img1_denoise);
 title('Denoise Salt Image with r = -1');
